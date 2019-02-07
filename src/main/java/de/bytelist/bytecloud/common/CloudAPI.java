@@ -24,4 +24,8 @@ public interface CloudAPI {
 
     public void kickPlayer(String playerName, String reason);
 
+    public String getServerIdFromPlayer(UUID uuid);
+
+    public UUID getUniqueIdFromName(String name);
+
 }
