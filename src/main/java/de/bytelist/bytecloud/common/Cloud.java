@@ -9,6 +9,8 @@ import lombok.Getter;
  */
 public final class Cloud {
 
+    public static final String PREFIX = "§bCloud §8\u00BB ";
+
     @Getter
     private static CloudPlugin instance;
 
@@ -18,6 +20,4 @@ public final class Cloud {
         }
         instance = plugin;
     }
-
-    public static final String PREFIX = "§bCloud §8\u00BB ";
 }
