@@ -3,18 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>bytecloud-parent</artifactId>
+        <artifactId>ByteCloud-Common</artifactId>
         <groupId>de.bytelist.bytecloud</groupId>
         <version>2.2</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>ByteCloud-Common</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>common-core</artifactId>
     <version>2.2</version>
-    <modules>
-        <module>common-core</module>
-        <module>common-spigot</module>
-        <module>common-bungee</module>
-    </modules>
+
+
 </project>

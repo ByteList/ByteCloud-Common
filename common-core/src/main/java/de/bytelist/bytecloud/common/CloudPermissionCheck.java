@@ -1,8 +1,5 @@
 package de.bytelist.bytecloud.common;
 
-import java.util.HashMap;
-import java.util.List;
-
 /**
  * Created by nemmerich on 07.02.2019.
  * <p>
