@@ -7,6 +7,8 @@ package de.bytelist.bytecloud.common;
  */
 public interface CloudPlugin {
 
+    public String getServerId();
+
     public String getVersion();
 
     public CloudPermissionCheck getPermissionCheck();

@@ -12,32 +12,31 @@ import java.io.IOException;
  * <p>
  * Copyright by ByteList - https://bytelist.de/
  */
-public class PingPacket implements Packet {
+public class ServerStartedPacket implements Packet {
 
-    public static final String PACKET_NAME = "PingPacket";
+    public static final String PACKET_NAME = "ServerStartedPacket";
 
     @Getter
-    private String id;
+    private String serverId;
 
-    public PingPacket() {}
+    public ServerStartedPacket() {}
 
-    public PingPacket(String id) {
-        this.id = id;
+    public ServerStartedPacket(String serverId) {
+        this.serverId = serverId;
     }
 
     @Override
     public void read(NetInput in) throws IOException {
-        this.id = in.readString();
+        this.serverId = in.readString();
     }
 
     @Override
     public void write(NetOutput out) throws IOException {
-        out.writeString(this.id);
+        out.writeString(this.serverId);
     }
 
     @Override
     public boolean isPriority() {
         return false;
     }
-
 }
