@@ -28,4 +28,8 @@ public interface CloudAPI {
 
     public UUID getUniqueIdFromName(String name);
 
+    public CloudPlayer getPlayer(UUID uuid);
+
+    public CloudPlayer getPlayer(String name);
+
 }
