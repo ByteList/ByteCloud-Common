@@ -17,6 +17,8 @@ public class PingPacket implements Packet {
     @Getter
     private String id;
 
+    public PingPacket() {}
+
     public PingPacket(String id) {
         this.id = id;
     }
