@@ -2,6 +2,7 @@ package de.bytelist.bytecloud.common;
 
 import java.util.Collection;
 import java.util.UUID;
+import java.util.logging.Logger;
 
 /**
  * Created by ByteList on 20.07.2018.
@@ -9,6 +10,8 @@ import java.util.UUID;
  * Copyright by ByteList - https://bytelist.de/
  */
 public interface CloudAPI {
+
+    public Logger getLogger();
 
     public Collection<String> getServers();
 
