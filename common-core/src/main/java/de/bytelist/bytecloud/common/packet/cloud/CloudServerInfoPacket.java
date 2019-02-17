@@ -1,4 +1,4 @@
-package de.bytelist.bytecloud.common.packet;
+package de.bytelist.bytecloud.common.packet.cloud;
 
 import com.github.steveice10.packetlib.io.NetInput;
 import com.github.steveice10.packetlib.io.NetOutput;
@@ -6,16 +6,13 @@ import com.github.steveice10.packetlib.packet.Packet;
 import lombok.Getter;
 
 import java.io.IOException;
-import java.util.List;
 
 /**
  * Created by nemmerich on 17.02.2019.
  * <p>
  * Copyright by nemmerich - https://bytelist.de/
  */
-public class ServerInfoPacket implements Packet {
-
-    public static final String PACKET_NAME = "ServerInfoPacket";
+public class CloudServerInfoPacket implements Packet {
 
     @Getter
     private String serverId, serverGroup, motd, serverState;
@@ -26,9 +23,9 @@ public class ServerInfoPacket implements Packet {
     @Getter
     private String players;
 
-    public ServerInfoPacket() {}
+    public CloudServerInfoPacket() {}
 
-    public ServerInfoPacket(String serverId, String serverGroup, String motd, String serverState, boolean serverPermanent, int slots, String players) {
+    public CloudServerInfoPacket(String serverId, String serverGroup, String motd, String serverState, boolean serverPermanent, int slots, String players) {
         this.serverId = serverId;
         this.serverGroup = serverGroup;
         this.motd = motd;

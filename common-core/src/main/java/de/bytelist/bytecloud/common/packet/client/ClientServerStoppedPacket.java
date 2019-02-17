@@ -1,4 +1,4 @@
-package de.bytelist.bytecloud.common.packet;
+package de.bytelist.bytecloud.common.packet.client;
 
 import com.github.steveice10.packetlib.io.NetInput;
 import com.github.steveice10.packetlib.io.NetOutput;
@@ -12,32 +12,32 @@ import java.io.IOException;
  * <p>
  * Copyright by ByteList - https://bytelist.de/
  */
-public class PingPacket implements Packet {
-
-    public static final String PACKET_NAME = "PingPacket";
+public class ClientServerStoppedPacket implements Packet {
 
     @Getter
-    private String id;
+    private String serverId, reason;
 
-    public PingPacket() {}
+    public ClientServerStoppedPacket() {}
 
-    public PingPacket(String id) {
-        this.id = id;
+    public ClientServerStoppedPacket(String serverId, String reason) {
+        this.serverId = serverId;
+        this.reason = reason;
     }
 
     @Override
     public void read(NetInput in) throws IOException {
-        this.id = in.readString();
+        this.serverId = in.readString();
+        this.reason = in.readString();
     }
 
     @Override
     public void write(NetOutput out) throws IOException {
-        out.writeString(this.id);
+        out.writeString(this.serverId);
+        out.writeString(this.reason);
     }
 
     @Override
     public boolean isPriority() {
         return false;
     }
-
 }
