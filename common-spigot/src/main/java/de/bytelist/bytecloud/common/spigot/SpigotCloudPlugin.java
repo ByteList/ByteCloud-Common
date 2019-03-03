@@ -11,6 +11,7 @@ import org.bukkit.entity.Player;
  */
 public interface SpigotCloudPlugin extends CloudPlugin {
 
+    @Override
     public SpigotCloudAPI getCloudAPI();
 
     @Override

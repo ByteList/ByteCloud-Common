@@ -18,24 +18,45 @@ public class CloudServerStartedPacket implements Packet {
     private String serverId;
     @Getter
     private int port;
+    @Getter
+    private String serverGroup;
+    @Getter
+    private boolean serverPermanent;
+    @Getter
+    private int slots;
+    @Getter
+    private String motd;
 
     public CloudServerStartedPacket() {}
 
-    public CloudServerStartedPacket(String serverId, int port) {
+    public CloudServerStartedPacket(String serverId, int port, String serverGroup, boolean serverPermanent, int slots, String motd) {
         this.serverId = serverId;
         this.port = port;
+        this.serverGroup = serverGroup;
+        this.serverPermanent = serverPermanent;
+        this.slots = slots;
+        this.motd = motd;
     }
+
 
     @Override
     public void read(NetInput in) throws IOException {
         this.serverId = in.readString();
         this.port = in.readInt();
+        this.serverGroup = in.readString();
+        this.serverPermanent = in.readBoolean();
+        this.slots = in.readInt();
+        this.motd = in.readString();
     }
 
     @Override
     public void write(NetOutput out) throws IOException {
         out.writeString(this.serverId);
         out.writeInt(this.port);
+        out.writeString(this.serverGroup);
+        out.writeBoolean(this.serverPermanent);
+        out.writeInt(this.slots);
+        out.writeString(this.motd);
     }
 
     @Override

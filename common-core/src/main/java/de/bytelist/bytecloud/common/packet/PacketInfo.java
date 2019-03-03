@@ -4,10 +4,8 @@ import com.github.steveice10.packetlib.packet.Packet;
 import de.bytelist.bytecloud.common.packet.client.ClientKeepAlivePacket;
 import de.bytelist.bytecloud.common.packet.client.ClientServerStartedPacket;
 import de.bytelist.bytecloud.common.packet.client.ClientServerStoppedPacket;
-import de.bytelist.bytecloud.common.packet.cloud.CloudServerInfoPacket;
-import de.bytelist.bytecloud.common.packet.cloud.CloudServerStartedPacket;
-import de.bytelist.bytecloud.common.packet.cloud.CloudServerStoppedPacket;
-import de.bytelist.bytecloud.common.packet.cloud.CloudKeepAlivePacket;
+import de.bytelist.bytecloud.common.packet.cloud.*;
+import de.bytelist.bytecloud.common.packet.cloud.player.*;
 import lombok.Getter;
 
 import java.util.function.BiConsumer;
@@ -28,9 +26,19 @@ public enum PacketInfo {
 
 
     CLOUD_KEEP_ALIVE_PACKET(CloudKeepAlivePacket.class),
+    CLOUD_SERVER_CHANGED_STATE_PACKET(CloudServerChangedStatePacket.class),
     CLOUD_SERVER_STARTED_PACKET(CloudServerStartedPacket.class),
     CLOUD_SERVER_STOPPED_PACKET(CloudServerStoppedPacket.class),
-    CLOUD_SERVER_INFO_PACKET(CloudServerInfoPacket.class);
+    CLOUD_SERVER_GROUP_INFO_PACKET(CloudServerGroupInfoPacket.class),
+
+    CLOUD_PLAYER_CONNECT_PACKET(CloudPlayerConnectPacket.class),
+    CLOUD_PLAYER_DISCONNECT_PACKET(CloudPlayerDisconnectPacket.class),
+    CLOUD_PLAYER_KICK_PACKET(CloudPlayerKickPacket.class),
+    CLOUD_PLAYER_MESSAGE_PACKET(CloudPlayerMessagePacket.class),
+    CLOUD_PLAYER_SERVER_SWITCH_PACKET(CloudPlayerServerSwitchPacket.class),
+
+
+    ;
 
 
     @Getter

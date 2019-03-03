@@ -1,5 +1,6 @@
 package de.bytelist.bytecloud.common;
 
+import de.bytelist.bytecloud.common.server.CloudServer;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,10 +11,8 @@ import java.util.UUID;
  * <p>
  * Copyright by nemmerich - https://bytelist.de/
  */
-public class CloudPlayer<T> {
+public class CloudPlayer {
 
-    @Getter
-    private final T player;
     @Getter
     private final UUID uuid;
     @Getter
@@ -21,8 +20,7 @@ public class CloudPlayer<T> {
     @Getter @Setter
     private CloudServer currentServer;
 
-    public CloudPlayer(T player, UUID uuid, String name) {
-        this.player = player;
+    public CloudPlayer(UUID uuid, String name) {
         this.uuid = uuid;
         this.name = name;
     }

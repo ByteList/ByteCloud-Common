@@ -11,6 +11,8 @@ public interface CloudPlugin {
 
     public String getVersion();
 
+    public CloudAPI getCloudAPI();
+
     public CloudPermissionCheck getPermissionCheck();
 
 }

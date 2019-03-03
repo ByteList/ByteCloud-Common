@@ -11,6 +11,7 @@ import net.md_5.bungee.api.connection.ProxiedPlayer;
  */
 public interface BungeeCloudPlugin extends CloudPlugin {
 
+    @Override
     public BungeeCloudAPI getCloudAPI();
 
     public  String getForcedJoinServerId();
