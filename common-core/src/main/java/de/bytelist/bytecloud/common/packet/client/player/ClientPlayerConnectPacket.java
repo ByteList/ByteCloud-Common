@@ -1,4 +1,4 @@
-package de.bytelist.bytecloud.common.packet.cloud.player;
+package de.bytelist.bytecloud.common.packet.client.player;
 
 import com.github.steveice10.packetlib.io.NetInput;
 import com.github.steveice10.packetlib.io.NetOutput;
@@ -13,17 +13,17 @@ import java.util.UUID;
  * <p>
  * Copyright by ByteList - https://bytelist.de/
  */
-public class CloudPlayerConnectPacket implements Packet {
+public class ClientPlayerConnectPacket implements Packet {
 
     @Getter
     private UUID uuid;
     @Getter
     private String name;
 
-    private CloudPlayerConnectPacket() {
+    private ClientPlayerConnectPacket() {
     }
 
-    public CloudPlayerConnectPacket(UUID uuid, String name) {
+    public ClientPlayerConnectPacket(UUID uuid, String name) {
         this.uuid = uuid;
         this.name = name;
     }

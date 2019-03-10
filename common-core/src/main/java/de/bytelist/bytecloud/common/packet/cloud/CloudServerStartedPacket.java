@@ -27,7 +27,7 @@ public class CloudServerStartedPacket implements Packet {
     @Getter
     private String motd;
 
-    public CloudServerStartedPacket() {}
+    private CloudServerStartedPacket() {}
 
     public CloudServerStartedPacket(String serverId, int port, String serverGroup, boolean serverPermanent, int slots, String motd) {
         this.serverId = serverId;

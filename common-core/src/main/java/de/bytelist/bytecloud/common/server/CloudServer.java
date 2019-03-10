@@ -5,6 +5,7 @@ import de.bytelist.bytecloud.common.CloudPlayer;
 import de.bytelist.bytecloud.common.ServerState;
 import de.bytelist.bytecloud.common.packet.cloud.CloudServerStartedPacket;
 import lombok.Getter;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -24,7 +25,7 @@ public class CloudServer{
     private CloudServerGroup serverGroup;
     @Getter
     private boolean serverPermanent, running;
-    @Getter
+    @Getter @Setter
     private ServerState serverState;
     @Getter
     private int slots;
@@ -60,5 +61,9 @@ public class CloudServer{
         this.stopServerReason = reason;
         this.cloudPlayers.clear();
         this.motd = reason;
+    }
+
+    public void setMotd(String motd) {
+        this.motd = motd;
     }
 }

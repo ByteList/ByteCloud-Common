@@ -2,6 +2,8 @@ package de.bytelist.bytecloud.common;
 
 import lombok.Getter;
 
+import java.util.UUID;
+
 /**
  * Created by ByteList on 17.02.2019.
  * <p>
@@ -21,5 +23,15 @@ public class CloudSoftware {
     public interface ICloudSoftware {
 
         public Executable getExecutable(String serverId);
+
+        public IServer getIServer(String serverId);
+
+        public void connectPlayer(CloudPlayer cloudPlayer);
+
+        public void disconnectPlayer(UUID uuid);
+
+        public void kickPlayer(UUID uuid, String reason);
+
+        public void setCurrentServer(UUID uuid, String serverId);
     }
 }

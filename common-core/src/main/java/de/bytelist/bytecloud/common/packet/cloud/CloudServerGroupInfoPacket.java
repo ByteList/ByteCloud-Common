@@ -23,7 +23,7 @@ public class CloudServerGroupInfoPacket implements Packet {
     @Getter
     private int slotsPerServer;
 
-    public CloudServerGroupInfoPacket() {}
+    private CloudServerGroupInfoPacket() {}
 
     public CloudServerGroupInfoPacket(String groupName, String prefix, int maxServers, int slotsPerServer) {
         this.groupName = groupName;

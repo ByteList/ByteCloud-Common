@@ -18,7 +18,7 @@ public class CloudPlayerDisconnectPacket implements Packet {
     @Getter
     private UUID uuid;
 
-    public CloudPlayerDisconnectPacket() {
+    private CloudPlayerDisconnectPacket() {
     }
 
     public CloudPlayerDisconnectPacket(UUID uuid) {
