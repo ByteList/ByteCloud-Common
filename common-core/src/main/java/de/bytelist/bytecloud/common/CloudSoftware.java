@@ -33,5 +33,11 @@ public class CloudSoftware {
         public void kickPlayer(UUID uuid, String reason);
 
         public void setCurrentServer(UUID uuid, String serverId);
+
+        public void startTempServer(String serverGroup, UUID sender);
+
+        public void startPermServer(String server, UUID sender);
+
+        public void stopServer(String serverId, UUID sender);
     }
 }

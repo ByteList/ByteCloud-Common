@@ -25,7 +25,9 @@ public enum PacketInfo {
     CLIENT_KEEP_ALIVE_PACKET(ClientKeepAlivePacket.class),
     CLIENT_SERVER_CHANGE_STATE_PACKET(ClientServerChangeStatePacket.class),
     CLIENT_SERVER_SET_MOTD_PACKET(ClientServerSetMotdPacket.class),
+    CLIENT_SERVER_START_PACKET(ClientServerStartPacket.class),
     CLIENT_SERVER_STARTED_PACKET(ClientServerStartedPacket.class),
+    CLIENT_SERVER_STOP_PACKET(ClientServerStopPacket.class),
     CLIENT_SERVER_STOPPED_PACKET(ClientServerStoppedPacket.class),
 
     CLIENT_PLAYER_CONNECT_PACKET(ClientPlayerConnectPacket.class),
