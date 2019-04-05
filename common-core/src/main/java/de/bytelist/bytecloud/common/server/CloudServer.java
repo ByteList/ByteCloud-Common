@@ -17,7 +17,7 @@ import java.util.List;
  * <p>
  * Copyright by nemmerich - https://bytelist.de/
  */
-public class CloudServer{
+public class CloudServer {
 
     @Getter
     private String serverId;
@@ -65,5 +65,10 @@ public class CloudServer{
 
     public void setMotd(String motd) {
         this.motd = motd;
+    }
+
+    @Override
+    public String toString() {
+        return "CloudServer[id="+this.serverId+", group="+this.serverGroup.getGroupName()+"]";
     }
 }
