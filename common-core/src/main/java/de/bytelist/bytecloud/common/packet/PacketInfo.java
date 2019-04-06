@@ -47,6 +47,7 @@ public enum PacketInfo {
     CLOUD_PLAYER_DISCONNECT_PACKET(CloudPlayerDisconnectPacket.class),
     CLOUD_PLAYER_KICK_PACKET(CloudPlayerKickPacket.class),
     CLOUD_PLAYER_MESSAGE_PACKET(CloudPlayerMessagePacket.class),
+    CLOUD_PLAYER_MOVE_TO_SERVER_PACKET(CloudPlayerMoveToServerPacket.class),
     CLOUD_PLAYER_SERVER_SWITCH_PACKET(CloudPlayerServerSwitchPacket.class),
 
 
