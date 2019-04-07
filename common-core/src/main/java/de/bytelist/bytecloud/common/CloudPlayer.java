@@ -19,9 +19,14 @@ public class CloudPlayer {
     private final String name;
     @Getter @Setter
     private CloudServer currentServer;
+    @Getter@Setter
+    private CloudLocation location;
+    @Getter@Setter
+    private boolean teleportOnJoinEnabled;
 
     public CloudPlayer(UUID uuid, String name) {
         this.uuid = uuid;
         this.name = name;
     }
+
 }

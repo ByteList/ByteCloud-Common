@@ -32,6 +32,8 @@ public class CloudSoftware {
 
         public void kickPlayer(UUID uuid, String reason);
 
+        public void setCloudLocation(UUID uuid, CloudLocation cloudLocation);
+
         public void setCurrentServer(UUID uuid, String serverId);
 
         public void startTempServer(String serverGroup, UUID sender);

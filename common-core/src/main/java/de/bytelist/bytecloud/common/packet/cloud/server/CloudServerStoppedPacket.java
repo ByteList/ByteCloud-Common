@@ -1,9 +1,8 @@
-package de.bytelist.bytecloud.common.packet.client;
+package de.bytelist.bytecloud.common.packet.cloud.server;
 
 import com.github.steveice10.packetlib.io.NetInput;
 import com.github.steveice10.packetlib.io.NetOutput;
 import com.github.steveice10.packetlib.packet.Packet;
-import de.bytelist.bytecloud.common.ServerState;
 import lombok.Getter;
 
 import java.io.IOException;
@@ -13,30 +12,28 @@ import java.io.IOException;
  * <p>
  * Copyright by ByteList - https://bytelist.de/
  */
-public class ClientServerChangeStatePacket implements Packet {
+public class CloudServerStoppedPacket implements Packet {
 
     @Getter
-    private String serverId;
-    @Getter
-    private ServerState state;
+    private String serverId, reason;
 
-    public ClientServerChangeStatePacket() {}
+    public CloudServerStoppedPacket() {}
 
-    public ClientServerChangeStatePacket(String serverId, ServerState state) {
+    public CloudServerStoppedPacket(String serverId, String reason) {
         this.serverId = serverId;
-        this.state = state;
+        this.reason = reason;
     }
 
     @Override
     public void read(NetInput in) throws IOException {
         this.serverId = in.readString();
-        this.state = ServerState.valueOf(in.readString());
+        this.reason = in.readString();
     }
 
     @Override
     public void write(NetOutput out) throws IOException {
         out.writeString(this.serverId);
-        out.writeString(this.state.name());
+        out.writeString(this.reason);
     }
 
     @Override

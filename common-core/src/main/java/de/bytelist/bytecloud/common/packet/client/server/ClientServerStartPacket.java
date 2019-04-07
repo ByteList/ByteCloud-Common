@@ -1,4 +1,4 @@
-package de.bytelist.bytecloud.common.packet.client;
+package de.bytelist.bytecloud.common.packet.client.server;
 
 import com.github.steveice10.packetlib.io.NetInput;
 import com.github.steveice10.packetlib.io.NetOutput;

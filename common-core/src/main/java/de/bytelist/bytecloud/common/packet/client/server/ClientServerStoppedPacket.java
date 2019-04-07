@@ -1,4 +1,4 @@
-package de.bytelist.bytecloud.common.packet.cloud;
+package de.bytelist.bytecloud.common.packet.client.server;
 
 import com.github.steveice10.packetlib.io.NetInput;
 import com.github.steveice10.packetlib.io.NetOutput;
@@ -12,14 +12,14 @@ import java.io.IOException;
  * <p>
  * Copyright by ByteList - https://bytelist.de/
  */
-public class CloudServerStoppedPacket implements Packet {
+public class ClientServerStoppedPacket implements Packet {
 
     @Getter
     private String serverId, reason;
 
-    public CloudServerStoppedPacket() {}
+    public ClientServerStoppedPacket() {}
 
-    public CloudServerStoppedPacket(String serverId, String reason) {
+    public ClientServerStoppedPacket(String serverId, String reason) {
         this.serverId = serverId;
         this.reason = reason;
     }

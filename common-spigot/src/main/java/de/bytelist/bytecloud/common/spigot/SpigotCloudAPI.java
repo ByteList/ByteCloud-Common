@@ -1,6 +1,7 @@
 package de.bytelist.bytecloud.common.spigot;
 
 import de.bytelist.bytecloud.common.CloudAPI;
+import de.bytelist.bytecloud.common.CloudLocation;
 import de.bytelist.bytecloud.common.ServerState;
 
 import java.util.UUID;
@@ -19,4 +20,6 @@ public interface SpigotCloudAPI extends CloudAPI {
     public void setMotd(String motd);
 
     public void shutdown(UUID sender);
+
+    public void setLocation(UUID uuid, CloudLocation cloudLocation);
 }

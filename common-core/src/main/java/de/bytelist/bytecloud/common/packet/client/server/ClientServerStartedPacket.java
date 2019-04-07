@@ -1,9 +1,8 @@
-package de.bytelist.bytecloud.common.packet.client;
+package de.bytelist.bytecloud.common.packet.client.server;
 
 import com.github.steveice10.packetlib.io.NetInput;
 import com.github.steveice10.packetlib.io.NetOutput;
 import com.github.steveice10.packetlib.packet.Packet;
-import de.bytelist.bytecloud.common.ServerState;
 import lombok.Getter;
 
 import java.io.IOException;
@@ -13,30 +12,25 @@ import java.io.IOException;
  * <p>
  * Copyright by ByteList - https://bytelist.de/
  */
-public class ClientServerSetMotdPacket implements Packet {
+public class ClientServerStartedPacket implements Packet {
 
     @Getter
     private String serverId;
-    @Getter
-    private String motd;
 
-    public ClientServerSetMotdPacket() {}
+    public ClientServerStartedPacket() {}
 
-    public ClientServerSetMotdPacket(String serverId, String motd) {
+    public ClientServerStartedPacket(String serverId) {
         this.serverId = serverId;
-        this.motd = motd;
     }
 
     @Override
     public void read(NetInput in) throws IOException {
         this.serverId = in.readString();
-        this.motd = in.readString();
     }
 
     @Override
     public void write(NetOutput out) throws IOException {
         out.writeString(this.serverId);
-        out.writeString(this.motd);
     }
 
     @Override

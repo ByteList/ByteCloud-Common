@@ -1,6 +1,6 @@
 package de.bytelist.bytecloud.common.server;
 
-import de.bytelist.bytecloud.common.packet.cloud.CloudServerGroupInfoPacket;
+import de.bytelist.bytecloud.common.packet.cloud.server.CloudServerGroupInfoPacket;
 import lombok.Getter;
 
 import java.util.ArrayList;

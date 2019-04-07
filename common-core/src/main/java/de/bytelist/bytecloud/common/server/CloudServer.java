@@ -3,7 +3,7 @@ package de.bytelist.bytecloud.common.server;
 import de.bytelist.bytecloud.common.Cloud;
 import de.bytelist.bytecloud.common.CloudPlayer;
 import de.bytelist.bytecloud.common.ServerState;
-import de.bytelist.bytecloud.common.packet.cloud.CloudServerStartedPacket;
+import de.bytelist.bytecloud.common.packet.cloud.server.CloudServerStartedPacket;
 import lombok.Getter;
 import lombok.Setter;
 

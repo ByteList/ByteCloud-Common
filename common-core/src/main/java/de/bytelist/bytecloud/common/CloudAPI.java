@@ -40,6 +40,8 @@ public interface CloudAPI {
 
     public void movePlayerToServer(UUID uuid, String serverId);
 
+    public void movePlayerToServerAndTeleport(UUID uuid, String serverId, CloudLocation cloudLocation);
+
     public void kickPlayer(UUID uuid, String reason);
 
     public String getServerIdFromPlayer(UUID uuid);

@@ -1,4 +1,4 @@
-package de.bytelist.bytecloud.common.packet.client;
+package de.bytelist.bytecloud.common.packet.cloud.server;
 
 import com.github.steveice10.packetlib.io.NetInput;
 import com.github.steveice10.packetlib.io.NetOutput;
@@ -12,28 +12,30 @@ import java.io.IOException;
  * <p>
  * Copyright by ByteList - https://bytelist.de/
  */
-public class ClientServerStoppedPacket implements Packet {
+public class CloudServerSetMotdPacket implements Packet {
 
     @Getter
-    private String serverId, reason;
+    private String serverId;
+    @Getter
+    private String motd;
 
-    public ClientServerStoppedPacket() {}
+    public CloudServerSetMotdPacket() {}
 
-    public ClientServerStoppedPacket(String serverId, String reason) {
+    public CloudServerSetMotdPacket(String serverId, String motd) {
         this.serverId = serverId;
-        this.reason = reason;
+        this.motd = motd;
     }
 
     @Override
     public void read(NetInput in) throws IOException {
         this.serverId = in.readString();
-        this.reason = in.readString();
+        this.motd = in.readString();
     }
 
     @Override
     public void write(NetOutput out) throws IOException {
         out.writeString(this.serverId);
-        out.writeString(this.reason);
+        out.writeString(this.motd);
     }
 
     @Override
